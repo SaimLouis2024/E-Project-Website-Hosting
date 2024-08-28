@@ -1,0 +1,205 @@
+@import url(./telma.css);
+
+/*--Variables--*/
+:root {
+  --c-dark: #173c4b;
+  --c-brand: #ca710b;
+  --c-brand-light: #43839c;
+  --c-brand-rgb: rgb(7, 88, 121);
+  --c-brand-rgba: rgba(97, 192, 230, 0.164);
+  --c-body: #bfedff;
+  --font-base: "Telma", serif;
+  --box-shadow: 0px 15px 25px rgba(8, 84, 114, 0.219);
+  --transition: all 1s ease;
+}
+
+/*--Helpers--*/
+body {
+  font-family: "Telma", serif;
+  line-height: 1.7rem;
+  background-color: rgb(225, 241, 247);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 .h1.h2.h3.h4.h5.h6 {
+  font-family: "Telma";
+  font-weight: 600;
+  color: rgb(202, 113, 11);
+}
+a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--c-brand-rgb);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--c-brand-light);
+  font-size: 20px;
+  transition: var(--transition);
+}
+p {
+  color: var(--c-dark);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.section-padding {
+  padding: 1.5rem;
+}
+.section-title {
+  color: var(--c-brand);
+}
+.section-title .line {
+  width: 100px;
+  height: 4px;
+  background-color: var(--c-brand-light);
+  margin: 16px auto 24px auto;
+}
+.theme-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+/*--Navbar--*/
+.navbar-brand {
+  font-family: "Telma";
+  font-weight: 600;
+  font-size: 2rem;
+  padding-left: 5px;
+}
+.navbar-nav .nav-link {
+  font-weight: 550;
+  color: whitesmoke;
+  font-family: unset;
+  transition: var(--transition);
+}
+.navbar-nav .nav-link:hover {
+  color: var(--c-brand);
+  transition: var(--transition);
+}
+
+/*--Carousel--*/
+.dropdown-item {
+  background-color: #173c4b;
+}
+.carousel-item img {
+  height: 660px;
+  object-fit: cover;
+}
+.carousel-caption {
+  margin-bottom: 180px;
+}
+.carousel-caption h5 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: "Telma";
+}
+.carousel-caption p {
+  font-size: 1.25rem;
+  color: whitesmoke;
+  margin: auto;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.carousel-caption .button {
+  background-color: var(--c-brand);
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+}
+.carousel-caption .button {
+  padding: 0.5rem 1rem;
+  background-color: #ca710b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+/*--About--*/
+.features h4 {
+  color: var(--c-brand);
+}
+.features h6 {
+  color: var(--c-brand-light);
+  font-size: 22px;
+  font-style: italic;
+}
+.features p {
+  color: var(--c-dark);
+}
+/*--Introduction--*/
+.detail h4 {
+  color: var(--c-brand);
+}
+.detail h6 {
+  color: var(--c-brand-light);
+  font-size: 22px;
+  font-style: italic;
+}
+.detail p {
+  color: var(--c-dark);
+}
+/*--Cards--*/
+#card-slide {
+  z-index: 2;
+  position: relative;
+}
+.card {
+  object-fit: cover;
+  margin: 10px;
+  box-shadow: var(--box-shadow);
+  transform: translateY(64%);
+  transition: var(--transition);
+}
+.card-img {
+  width: 300px;
+  height: 330px;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+.content {
+  padding: 1rem;
+  position: absolute;
+}
+.content .card-title {
+  font-family: "Telma";
+  font-size: 1.3rem;
+  margin: 1.4rem 0;
+  font-weight: bold;
+  color: var(--c-brand);
+  transition: var(--transition);
+}
+.card-text {
+  display: block;
+  color: whitesmoke;
+  transition: var(--transition);
+}
+.content:hover h4,
+.content:hover p {
+  transform: translateY(-60%);
+  transition: var(--transition);
+}
+/*--------Faq's--------*/
+#accordian {
+  position: relative;
+  z-index: 2;
+}
+#accordian::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  color: var(--c-brand-light);
+  background-color: linear-gradient(
+    rgba(var(--c-brand-rgb), 0.5),
+    rgba(var(--c-brand-rgb), 0.7),
+    rgba(var(--c-brand-rgb), 0.9)
+  );
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
